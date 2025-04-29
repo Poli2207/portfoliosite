@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Привет, я Полина</h1>
+        <p>Студент 1 курса Информационной безопасности</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'about')">Обо мне</button>
+        <button class="tab-button" onclick="openTab(event, 'gallery')">Галерея</button>
+        <button class="tab-button" onclick="openTab(event, 'hobby')">Хобби</button>
+        <button class="tab-button" onclick="openTab(event, 'achievements')">Достижения</button>
+        <button class="tab-button" onclick="openTab(event, 'contacts')">Контакты</button>
+    </nav>
+
+    <div id="about" class="tab-content active">
+        <h2>Обо мне</h2>
+        <p>Привет! Меня зовут Полина, я учусь в ВЯТГУ на 1 курсе Информационной безопасности.</p>
+        <p>Я владею языками программирования Python и C++, а также технологиями веб-разработки HTML и CSS.</p>
+    </div>
+
+    <div id="gallery" class="tab-content">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <img src="images/photo1.jpg" alt="Фото 1">
+            <img src="images/photo2.jpg" alt="Фото 2">
+            <img src="images/photo3.jpg" alt="Фото 3">
+            <img src="images/photo4.jpg" alt="Фото 4">
+            <img src="images/photo5.jpg" alt="Фото 5">
+            <img src="images/photo6.jpg" alt="Фото 6">
+            <img src="images/photo7.jpg" alt="Фото 7">
+            <img src="images/photo8.jpg" alt="Фото 8">
+            <img src="images/photo9.jpg" alt="Фото 9">
+            <img src="images/photo10.jpg" alt="Фото 10">
+        </div>
+    </div>
+
+    <div id="hobby" class="tab-content">
+        <h2>Хобби</h2>
+        <ul>
+            <li>Проводить время с друзьями</li>
+            <li>Путешествовать</li>
+            <li>Играть на компьютере</li>
+        </ul>
+    </div>
+
+    <div id="achievements" class="tab-content">
+        <h2>Достижения</h2>
+        <ul>
+            <li>1 место дивизионного этапа КЭС Баскет</li>
+            <li>Золотая медаль ГТО 2024 года</li>
+        </ul>
+    </div>
+
+    <div id="contacts" class="tab-content">
+        <h2>Контакты</h2>
+        <div class="social-buttons">
+            <a href="https://t.me/polinnk_0" target="_blank" class="tg-button">
+                <img src="https://telegram.org/img/t_logo.png" alt="Telegram" width="20">
+                Telegram
+            </a>
+            <a href="https://vk.com/polinnk_0" target="_blank" class="vk-button">
+                <img src="https://vk.com/images/svg_icons/ic_head_logo.svg" alt="VK" width="20">
+                ВКонтакте
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Моё Портфолио</p>
+    </footer>
+
+    <script>
+        function openTab(event, tabName) {
+            // Скрыть все вкладки
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Убрать активные кнопки
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // Показать выбранную вкладку
+            document.getElementById(tabName).classList.add('active');
+
+            // Сделать активной нажатую кнопку
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

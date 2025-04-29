@@ -1,0 +1,120 @@
+/* Базовые стили */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #b3d4fc;
+}
+
+h1, h2 {
+    color: #2c6cb0;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Навигация */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-button {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #b3d4fc;
+    background: #e6f0ff;
+    color: #2c6cb0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .tab-button.active,
+    .tab-button:hover {
+        background: #b3d4fc;
+        color: #fff;
+    }
+
+/* Контент */
+.tab-content {
+    display: none;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+/* Галерея */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+    .gallery-grid img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+/* Контакты */
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+    .social-buttons a {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 1.5rem;
+        background: #b3d4fc;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+
+        .social-buttons a:hover {
+            background: #2c6cb0;
+        }
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    color: #666;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-content {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+}
